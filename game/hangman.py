@@ -1,4 +1,5 @@
 #ハングマン定義
+import random
 def hangman(word):
         wrong = 0
         stages = ["",
@@ -37,4 +38,8 @@ def hangman(word):
         if not win:
                 print("\n".join(stages[0:wrong+1]))
                 print("あなたの負け!正解は{}.".format(word))
-hangman("cat")
+#答えランダム設定               
+word_list = ['fire', 'water', 'tree']
+ans = random.choice(word_list)
+#実行
+hangman(ans)
